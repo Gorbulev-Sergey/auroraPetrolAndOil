@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.template.aurora1
+Exec=/usr/bin/ru.template.aurora1
+Name=Oil calculator
+Name[ru]=Калькулятор масла
+
+[X-Application]
+Permissions=
+OrganizationName=ru.template
+ApplicationName=aurora1
+ExecDBus=/usr/bin/ru.template.aurora1
