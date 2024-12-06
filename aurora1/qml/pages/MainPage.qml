@@ -8,10 +8,15 @@ Page {
     property var proportion: [20,25,30,35,40,45,50]
     property int selectedProportion: proportion[0]
 
-    property double petrol : 0
+    property int petrolLitres: 0
+    property int petrolMiliLitres: 0
+
+    function calculatePetrol(){
+        return (petrolLitres + petrolMiliLitres/100).toFixed(2)
+    }
 
     function calculateOil(){
-        return ((1*petrol)/selectedProportion).toFixed(2)
+        return ((1*calculatePetrol())/selectedProportion).toFixed(2)
     }
 
     SilicaFlickable {
@@ -39,6 +44,7 @@ Page {
             }
 
             Column {
+                id:mySpace
                 anchors {
                     left: parent.left; right: parent.right; margins: Theme.horizontalPageMargin
                 }
@@ -82,9 +88,12 @@ Page {
                     font.pixelSize: Theme.fontSizeMedium
                     textFormat: Text.RichText
                     wrapMode: Text.WordWrap
-                    text: qsTr("Количесво бензина: ") + petrol + qsTr(" литров")
+                    text: qsTr("Количесво бензина: ") + calculatePetrol()
                 }
 
+
+
+                // Литры
                 Slider {
                     id: sliderPetrolLitres
                     anchors { left: parent.left; right: parent.right;}
@@ -93,7 +102,20 @@ Page {
                     maximumValue: 50
                     stepSize: 1
                     onValueChanged: {
-                        petrol = sliderPetrolLitres.value
+                        petrolLitres = sliderPetrolLitres.value
+                    }
+                }
+
+                // Миллилитры
+                Slider {
+                    id: sliderPetrolMiliLitres
+                    anchors { left: parent.left; right: parent.right;}
+                    color: palette.highlightColor
+                    minimumValue: 0
+                    maximumValue: 99
+                    stepSize: 1
+                    onValueChanged: {
+                        petrolMiliLitres = sliderPetrolMiliLitres.value
                     }
                 }
             }
@@ -111,7 +133,7 @@ Page {
                     font.pixelSize: Theme.fontSizeMedium
                     textFormat: Text.RichText
                     wrapMode: Text.WordWrap
-                    text: qsTr("Количесво масла: ") + calculateOil() + qsTr(" литров")
+                    text: qsTr("Количесво масла: ") + calculateOil() + qsTr(" литров (") + (calculateOil()*1000).toFixed(0) + qsTr(" миллилитров)")
                 }
             }
 

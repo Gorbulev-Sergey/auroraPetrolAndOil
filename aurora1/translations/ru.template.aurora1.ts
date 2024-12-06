@@ -42,33 +42,37 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="30"/>
+        <location filename="../qml/pages/MainPage.qml" line="35"/>
         <source>Пропорции масла и бензина</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="53"/>
+        <location filename="../qml/pages/MainPage.qml" line="59"/>
         <source>Пропорция масла и бензина:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="60"/>
+        <location filename="../qml/pages/MainPage.qml" line="66"/>
         <source>1/</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="85"/>
+        <location filename="../qml/pages/MainPage.qml" line="91"/>
         <source>Количесво бензина: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="85"/>
-        <location filename="../qml/pages/MainPage.qml" line="114"/>
-        <source> литров</source>
+        <location filename="../qml/pages/MainPage.qml" line="136"/>
+        <source> литров (</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="114"/>
+        <location filename="../qml/pages/MainPage.qml" line="136"/>
+        <source> миллилитров)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="136"/>
         <source>Количесво масла: </source>
         <translation type="unfinished"></translation>
     </message>
